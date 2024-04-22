@@ -78,7 +78,7 @@ def get_pie_chart(entered_site):
                Input(component_id="payload-slider", component_property="value")])
 def get_scatter_chart(entered_site, payload):
    
-    filtered_df = spacex_df[space_df['Payload Mass (kg)'].between(payload[0],payload[1])]
+    filtered_df = spacex_df[spacex_df['Payload Mass (kg)'].between(payload[0],payload[1])]
  
     if entered_site == 'ALL':
         fig = px.scatter(filtered_df, x='Payload Mass (kg)', y='class', color='Booster Version Category', title='Total Count All Sites')
